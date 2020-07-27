@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
           "C:\\Users\\Dmitry\\AppData\\Roaming\\NuGet\\NuGet.Config",

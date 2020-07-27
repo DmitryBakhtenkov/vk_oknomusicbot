@@ -30,6 +30,7 @@ namespace vkontakteoknomusic_2
         {
             services.AddControllers();
             services.AddMvc();
+            services.AddCors();
             services.AddSingleton<IVkApi>(sp => {
                 var api = new VkApi();
                 api.Authorize(new ApiAuthParams { AccessToken = Configuration["Config:AccessToken"] });
@@ -58,7 +59,9 @@ namespace vkontakteoknomusic_2
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
+            app.UseCors(builder => builder.AllowAnyOrigin());
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

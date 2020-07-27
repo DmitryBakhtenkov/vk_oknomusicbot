@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using vkontakteoknomusic_2.Models;
 
 namespace vkontakteoknomusic_2.Controllers
@@ -14,10 +15,12 @@ namespace vkontakteoknomusic_2.Controllers
         /// Метод post, создающий команду
         /// </summary>
         [HttpPost]
-        public IActionResult CreateCommand([FromBody] Command command)
+        public IActionResult CreateCommand([FromForm] Command command)
         {
-            //TODO: Creating command logic
-            return Ok();
+            if (CommandContext.AddCommand(command))
+                return Ok("Ok");
+            else
+                return BadRequest();
         }
         /// <summary>
         /// Метод get, возвращающий список всех команд
@@ -25,17 +28,17 @@ namespace vkontakteoknomusic_2.Controllers
         [HttpGet]
         public IActionResult GetListCommands()
         {
-            //TODO: Creating GET command
-            return Ok();
+            var commands = CommandContext.GetContext();
+            return Ok(commands);
         }
         /// <summary>
         /// Метод get, возвращающий команду по триггеру
         /// </summary>
         [HttpGet("{trigger}")]
-        public IActionResult GetCommandGyTrigger(string trigger)
+        public IActionResult GetCommandByTrigger(string trigger)
         {
-            //TODO: logic Get by trigger
-            return Ok();
+            var command = CommandContext.GetContext().SingleOrDefault(c => c.Trigger == trigger);
+            return Ok(command);
         }
         /// <summary>
         /// Метод put, изменяющий команду в списке существующих команд
@@ -52,8 +55,11 @@ namespace vkontakteoknomusic_2.Controllers
         [HttpDelete("{trigger}")]
         public IActionResult DeleteCommand(string trigger)
         {
-            //TODO: delete logic
-            return Ok();
+            var command = CommandContext.GetContext().SingleOrDefault(c => c.Trigger == trigger);
+            if (CommandContext.DeleteCommand(command))
+                return Ok();
+            else
+                return BadRequest();
         }
         
     }
