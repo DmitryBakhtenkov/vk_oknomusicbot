@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {}
+    "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {
+    "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
+        "projectUniqueName": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
         "projectName": "vkontakteoknomusic_2",
-        "projectPath": "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
-        "packagesPath": "C:\\Users\\Dmitry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dmitry\\RiderProjects\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\obj\\",
+        "projectPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dmitry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -42,6 +42,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.9, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.10.4, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"

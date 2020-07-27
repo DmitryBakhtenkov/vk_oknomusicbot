@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+using System.Threading.Tasks;
 using vkontakteoknomusic_2.Models;
 
 namespace vkontakteoknomusic_2.Controllers
@@ -11,13 +11,15 @@ namespace vkontakteoknomusic_2.Controllers
     [Route("api/[controller]")]
     public class SettingsController : ControllerBase
     {
+        private readonly Repository _repo = new Repository();
+
         /// <summary>
         /// Метод post, создающий команду
         /// </summary>
         [HttpPost]
-        public IActionResult CreateCommand([FromForm] Command command)
+        public async Task<IActionResult> CreateCommand([FromForm] Command command)
         {
-            if (CommandContext.AddCommand(command))
+            if (await _repo.CreateCommandAsync(command))
                 return Ok("Ok");
             else
                 return BadRequest();
@@ -26,28 +28,29 @@ namespace vkontakteoknomusic_2.Controllers
         /// Метод get, возвращающий список всех команд
         /// </summary>
         [HttpGet]
-        public IActionResult GetListCommands()
+        public async Task<IActionResult> GetListCommands()
         {
-            var commands = CommandContext.GetContext();
-            return Ok(commands);
+            var result = await _repo.GetAllAsync();
+            return Ok(result);
         }
         /// <summary>
         /// Метод get, возвращающий команду по триггеру
         /// </summary>
         [HttpGet("{trigger}")]
-        public IActionResult GetCommandByTrigger(string trigger)
+        public async Task<IActionResult> GetCommandByTrigger(string trigger)
         {
-            var command = CommandContext.GetContext().SingleOrDefault(c => c.Trigger == trigger);
-            return Ok(command);
+            return Ok(await _repo.GetCommandByTriggerAsync(trigger));
         }
         /// <summary>
         /// Метод put, изменяющий команду в списке существующих команд
         /// </summary>
         [HttpPut]
-        public IActionResult UpdateCommand(Command command)
+        public async Task<IActionResult> UpdateCommand(string trigger, Command command)
         {
-            //TODO: logic for update method
-            return Ok();
+            if(await _repo.UpdateCommandAsync(trigger, command))
+                return Ok();
+            else
+                return BadRequest();
         }
         /// <summary>
         /// Метод delete, удаляющий команду с определённым триггером
@@ -55,11 +58,7 @@ namespace vkontakteoknomusic_2.Controllers
         [HttpDelete("{trigger}")]
         public IActionResult DeleteCommand(string trigger)
         {
-            var command = CommandContext.GetContext().SingleOrDefault(c => c.Trigger == trigger);
-            if (CommandContext.DeleteCommand(command))
-                return Ok();
-            else
-                return BadRequest();
+            return Ok();
         }
         
     }

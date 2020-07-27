@@ -29,6 +29,6 @@ namespace vkontakteoknomusic_2.Models
             /// Секретный ключ сообщества
             /// </summary>
             [JsonProperty("secret")]
-            public string secret { get; set; }
+            public string Secret { get; set; }
         }
 }

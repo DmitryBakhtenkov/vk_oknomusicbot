@@ -5,12 +5,13 @@ using VkNet.Enums.SafetyEnums;
 using VkNet.Model.Attachments;
 using VkNet.Model.Keyboard;
 using VkNet.Model.RequestParams;
+using vkontakteoknomusic_2.Models;
 
 namespace vkontakteoknomusic_2.Message
 {
     public static class MessageSender
     {
-        public static bool Send(IVkApi vkApi, string text, long peerId, MessageKeyboard keyboard = null, IEnumerable<MediaAttachment> attachments = null)
+        public static bool Send(IVkApi vkApi, Command command, long? peerId)
         {
             try
             {
@@ -18,9 +19,9 @@ namespace vkontakteoknomusic_2.Message
                 {
                     RandomId = new DateTime().Millisecond,
                     PeerId = peerId,
-                    Message = text,
-                    Keyboard = keyboard,
-                    Attachments = attachments
+                    Message = command.Answer,
+                    Keyboard = GetMessageKeyboard(command.ButtonNames),
+                    Attachments = command.Attachments
                 });
                 return true;
             }
@@ -39,6 +40,8 @@ namespace vkontakteoknomusic_2.Message
                 i++;
                 if(n == "FAQ")
                     builder.AddButton(n, "", KeyboardButtonColor.Default);
+                else if(n == "Назад")
+                    builder.AddButton(n, "", KeyboardButtonColor.Negative);
                 else
                     builder.AddButton(n, "", KeyboardButtonColor.Positive);
                 if(i % 2 == 0)

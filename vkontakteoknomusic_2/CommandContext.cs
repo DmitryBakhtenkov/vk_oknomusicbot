@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MongoDB.Driver;
+using System.Collections.Generic;
 using System.Linq;
 using vkontakteoknomusic_2.Models;
 
@@ -9,53 +10,17 @@ namespace vkontakteoknomusic_2
     /// </summary>
     public class CommandContext
     {
-        /// <summary>
-        /// Список всех существующих команд
-        /// </summary>
-        private static List<Command> _commands;
+        private readonly IMongoDatabase _database;
 
-        /// <summary>
-        /// Синглтон, возвращающий список
-        /// </summary>
-        /// <returns></returns>
-        public static List<Command> GetContext()
+        //Connect to db
+        public CommandContext()
         {
-            if (_commands == null)
-            {
-                _commands = new List<Command>();
-            }
-            return _commands;
+            var client = new MongoClient("mongodb://mongo-root:QazPlmOkWs12@188.227.84.24:20000/");
+            if (client != null)
+                _database = client.GetDatabase("vkontakteTestDb");
         }
-        /// <summary>
-        /// Логика добавления команды
-        /// </summary>
-        /// <param name="command"></param>
-        /// <returns>Возвращает false, если команда с таким триггером уже есть</returns>
-        public static bool AddCommand(Command command)
-        {
-            command.ButtonNames = command.ButtonNames.TakeWhile(c => c != null);
-            if (_commands.SingleOrDefault(c => c.Trigger == command.Trigger) != null)
-                return false;
-            else
-                _commands.Add(command);
-            return true;
-        }
-        /// <summary>
-        /// Удаляет выбранную команду
-        /// </summary>
-        /// <param name="command"></param>
-        /// <returns></returns>
-        public static bool DeleteCommand(Command command)
-        {
-            if(_commands.Contains(command))
-            {
-                _commands.Remove(command);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        //Get collection
+        public IMongoCollection<Command> Notes => _database.GetCollection<Command>("vkBot");
     }
+    
 }
