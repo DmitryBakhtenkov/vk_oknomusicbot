@@ -10,7 +10,7 @@ using vkontakteoknomusic_2.Models;
 
 namespace NUnitTestProject
 {
-    public class Tests
+    public class TestGetAllCommands
     {
         private List<Command> _commands;
         [SetUp]

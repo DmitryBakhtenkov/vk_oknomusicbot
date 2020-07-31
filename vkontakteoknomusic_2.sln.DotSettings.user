@@ -1,4 +1,16 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5b5c6c0f_002Dee8a_002D45f7_002D865a_002D1fe9e37e5d12/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestNormalCreate" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestCreateCommand.TestNormalCreate&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestGetCommandByTrigger.TestGetByTriggerExist&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestCreateCommand.TestNullCreate&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8a1ac5cf_002D53fc_002D44aa_002D9674_002Dba583c7e2268/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestNullCreate" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestCreateCommand.TestNullCreate&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e54216cc_002D9713_002D4640_002D8de1_002Deb50e8c85072/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAllNotesTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.Tests.GetAllNotesTest&lt;/TestId&gt;&#xD;
