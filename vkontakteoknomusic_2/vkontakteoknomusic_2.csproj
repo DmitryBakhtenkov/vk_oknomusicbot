@@ -20,5 +20,7 @@
       <PackageReference Include="VkNet" Version="1.54.0" />
     </ItemGroup>
 
+    <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
 
 </Project>

@@ -19,10 +19,11 @@ namespace vkontakteoknomusic_2.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IVkApi _vkApi;
-        private readonly Repository _repo = new Repository();
+        private readonly Repository _repo;
         
-        public CallbackController(IVkApi vkApi, IConfiguration configuration)
+        public CallbackController(IVkApi vkApi, IConfiguration configuration, Repository repo)
         {
+            _repo = repo;
             _vkApi = vkApi;
             _configuration = configuration;
         }
@@ -40,7 +41,7 @@ namespace vkontakteoknomusic_2.Controllers
                     return Ok(_configuration["Config:Confirmation"]);
                 case "message_new":
                     var message = VkNet.Model.Message.FromJson(new VkResponse(updates.Object));
-                    var command = await _repo.GetCommandByTriggerAsync(message.Text);
+                    var command = await _repo.GetByTriggerAsync(message.Text);
                     if (command != null)
                     {
                         MessageSender.Send(_vkApi, command, message.PeerId);

@@ -9,19 +9,26 @@ namespace vkontakteoknomusic_2
 {
     public class Repository
     {
-        private CommandContext _context = new CommandContext();
+        private readonly CommandContext _context;
 
-        public async Task<IEnumerable<Command>> GetAllAsync()
+        public Repository() { /*For tests */ }
+
+        public Repository(string connectionString, string database, string collection)
+        {
+            _context = new CommandContext(connectionString, database, collection);
+        }
+
+        public virtual async Task<IEnumerable<Command>> GetAllAsync()
         {
             return await _context.Notes.Find(_ => true).ToListAsync();
         }
 
-        public async Task<Command> GetCommandByTriggerAsync(string trigger)
+        public virtual async Task<Command> GetByTriggerAsync(string trigger)
         {
             return await _context.Notes.Find(c => c.Trigger == trigger).FirstOrDefaultAsync();
         }
 
-        public async Task<bool> CreateCommandAsync(Command command)
+        public virtual async Task<bool> CreateCommandAsync(Command command)
         {
             command.ButtonNames = command.ButtonNames.TakeWhile(c => c != null);
             
@@ -34,12 +41,12 @@ namespace vkontakteoknomusic_2
             return true;
         }
 
-        public async Task<bool> UpdateCommandAsync(string oldTrigger, Command newCommand)
+        public virtual async Task<bool> UpdateCommandAsync(string oldParam, Command newCommand)
         {
             if (_context.Notes.Find(_ => true).ToList().Contains(newCommand))
                 return false;
 
-            var filter = Builders<Command>.Filter.Eq(c => c.Trigger, oldTrigger);
+            var filter = Builders<Command>.Filter.Eq(c => c.Trigger, oldParam);
             var update = Builders<Command>.Update.Set(c => c, newCommand);
             var updateResult = await _context.Notes.UpdateOneAsync(filter, update);
 
@@ -49,9 +56,9 @@ namespace vkontakteoknomusic_2
                 return false;
         }
 
-        public async Task<bool> DeleteCommandAsync(Command command)
+        public virtual async Task<bool> DeleteCommandAsync(Command command)
         {
-            if (await GetCommandByTriggerAsync(command.Trigger) != null)
+            if (await GetByTriggerAsync(command.Trigger) != null)
             {
                 var filter = Builders<Command>.Filter.Eq(c => c.Trigger, command.Trigger);
                 await _context.Notes.DeleteOneAsync(filter);

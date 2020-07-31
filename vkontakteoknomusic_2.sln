@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vkontakteoknomusic_2", "vkontakteoknomusic_2\vkontakteoknomusic_2.csproj", "{C0F76828-A878-44C1-B87F-083F7819DFDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{4895F9AD-4E3B-4B55-8977-41DB17C40484}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitTestProject", "NUnitTestProject\NUnitTestProject.csproj", "{4895F9AD-4E3B-4B55-8977-41DB17C40484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

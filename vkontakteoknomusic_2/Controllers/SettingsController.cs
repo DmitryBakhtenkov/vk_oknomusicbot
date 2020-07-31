@@ -11,7 +11,13 @@ namespace vkontakteoknomusic_2.Controllers
     [Route("api/[controller]")]
     public class SettingsController : ControllerBase
     {
-        private readonly Repository _repo = new Repository();
+        private readonly Repository _repo;
+
+        public SettingsController(Repository repo)
+        {
+            if (repo != null)
+                _repo = repo;
+        }
 
         /// <summary>
         /// Метод post, создающий команду
@@ -39,7 +45,7 @@ namespace vkontakteoknomusic_2.Controllers
         [HttpGet("{trigger}")]
         public async Task<IActionResult> GetCommandByTrigger(string trigger)
         {
-            return Ok(await _repo.GetCommandByTriggerAsync(trigger));
+            return Ok(await _repo.GetByTriggerAsync(trigger));
         }
         /// <summary>
         /// Метод put, изменяющий команду в списке существующих команд

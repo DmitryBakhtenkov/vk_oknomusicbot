@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e54216cc_002D9713_002D4640_002D8de1_002Deb50e8c85072/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAllNotesTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.Tests.GetAllNotesTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fe9521af_002D8684_002D4c7c_002D8cd0_002Dc244284226be/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAllNotesTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.Tests.GetAllNotesTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

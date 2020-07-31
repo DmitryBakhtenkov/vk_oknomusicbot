@@ -103,8 +103,10 @@ D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\bin\Debug\netcoreapp
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.csprojAssemblyReference.cache
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.AssemblyInfoInputs.cache
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.AssemblyInfo.cs
-D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.csproj.CoreCompileInputs.cache
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.csproj.CopyComplete
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.dll
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.pdb
 D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.genruntimeconfig.cache
+D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\bin\Debug\netcoreapp3.1\Moq.dll
+D:\Library\Desktop\vk\vkontakteoknomusic_2\NUnitTestProject\obj\Debug\netcoreapp3.1\NUnitTestProject.csproj.CoreCompileInputs.cache
