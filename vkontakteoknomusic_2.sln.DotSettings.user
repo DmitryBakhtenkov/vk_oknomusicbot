@@ -11,6 +11,11 @@
     &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestCreateCommand.TestNullCreate&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d96f4d0f_002D3597_002D428d_002Db99d_002D5902b8b8553b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UpdateExistCommand" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.TestUpdateCommand.UpdateExistCommand&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e54216cc_002D9713_002D4640_002D8de1_002Deb50e8c85072/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAllNotesTest #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::4895F9AD-4E3B-4B55-8977-41DB17C40484::.NETCoreApp,Version=v3.1::NUnitTestProject.Tests.GetAllNotesTest&lt;/TestId&gt;&#xD;

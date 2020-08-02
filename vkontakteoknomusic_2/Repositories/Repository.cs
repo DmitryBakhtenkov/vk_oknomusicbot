@@ -30,7 +30,8 @@ namespace vkontakteoknomusic_2
 
         public virtual async Task<bool> CreateCommandAsync(Command command)
         {
-            command.ButtonNames = command.ButtonNames.TakeWhile(c => c != null);
+            if(command.ButtonNames != null)
+                command.ButtonNames = command.ButtonNames.TakeWhile(c => c != null);
             
             if (await _context.Notes.Find(c => c.Trigger == command.Trigger).FirstOrDefaultAsync() != null || command.Trigger == null)
             {
@@ -47,8 +48,10 @@ namespace vkontakteoknomusic_2
                 return false;
 
             var filter = Builders<Command>.Filter.Eq(c => c.Trigger, oldParam);
-            var update = Builders<Command>.Update.Set(c => c, newCommand);
-            var updateResult = await _context.Notes.UpdateOneAsync(filter, update);
+            var oldCommand = await GetByTriggerAsync(oldParam);
+            newCommand.Id = oldCommand.Id;
+           //var update = Builders<Command>.Update.Set(c => c.Trigger, newCommand.Trigger);
+            var updateResult = await _context.Notes.ReplaceOneAsync(filter, newCommand);
 
             if (updateResult.IsAcknowledged)
                 return true;

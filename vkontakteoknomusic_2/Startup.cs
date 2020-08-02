@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,7 +58,7 @@ namespace vkontakteoknomusic_2
 
             app.UseAuthorization();
             
-            app.UseCors(builder => builder.AllowAnyOrigin());
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().Build());
             
             app.UseEndpoints(endpoints =>
             {

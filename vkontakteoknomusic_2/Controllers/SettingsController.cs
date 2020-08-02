@@ -50,11 +50,11 @@ namespace vkontakteoknomusic_2.Controllers
         /// <summary>
         /// Метод put, изменяющий команду в списке существующих команд
         /// </summary>
-        [HttpPut]
-        public async Task<IActionResult> UpdateCommand(string trigger, Command command)
+        [HttpPut("{trigger}")]
+        public async Task<IActionResult> UpdateCommand(string trigger, [FromBody] Command command)
         {
             if(await _repo.UpdateCommandAsync(trigger, command))
-                return Ok();
+                return Ok("Ok");
             else
                 return BadRequest();
         }
@@ -62,9 +62,15 @@ namespace vkontakteoknomusic_2.Controllers
         /// Метод delete, удаляющий команду с определённым триггером
         /// </summary>>
         [HttpDelete("{trigger}")]
-        public IActionResult DeleteCommand(string trigger)
+        public async Task<IActionResult> DeleteCommand(string trigger)
         {
-            return Ok();
+            var command = await _repo.GetByTriggerAsync(trigger);
+            if (command != null)
+            {
+                if (await _repo.DeleteCommandAsync(command))
+                    return Ok("Ok");
+            }
+            return BadRequest();
         }
         
     }
