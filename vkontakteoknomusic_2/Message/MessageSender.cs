@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using VkNet.Abstractions;
 using VkNet.Enums.SafetyEnums;
-using VkNet.Model.Attachments;
 using VkNet.Model.Keyboard;
 using VkNet.Model.RequestParams;
 using vkontakteoknomusic_2.Models;
