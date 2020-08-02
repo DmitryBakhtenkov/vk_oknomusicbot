@@ -6626,11 +6626,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
+      "projectUniqueName": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
       "projectName": "vkontakteoknomusic_2",
-      "projectPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
+      "projectPath": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\obj\\",
+      "outputPath": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

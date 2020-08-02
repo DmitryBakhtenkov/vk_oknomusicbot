@@ -7047,11 +7047,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\NUnitTestProject\\NUnitTestProject.csproj",
+      "projectUniqueName": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\NUnitTestProject\\NUnitTestProject.csproj",
       "projectName": "NUnitTestProject",
-      "projectPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\NUnitTestProject\\NUnitTestProject.csproj",
+      "projectPath": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\NUnitTestProject\\NUnitTestProject.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\NUnitTestProject\\obj\\",
+      "outputPath": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\NUnitTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -7071,8 +7071,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {
-              "projectPath": "D:\\Library\\Desktop\\vk\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj"
+            "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj": {
+              "projectPath": "D:\\Library\\Desktop\\vk public\\vkontakteoknomusic_2\\vkontakteoknomusic_2\\vkontakteoknomusic_2.csproj"
             }
           }
         }
